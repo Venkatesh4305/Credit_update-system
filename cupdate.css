@@ -1,0 +1,306 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+}
+
+/* Container */
+.container {
+    display: flex;
+    width: 100%;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #1f2c3c;
+    color: #fff;
+    width: 240px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Profile Section */
+.profile-section {
+    text-align: center;
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.name {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.employee-id {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #7f8c8d;
+}
+
+.designation {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0 0;
+    width: 100%;
+}
+
+.menu li {
+    width: 100%;
+}
+
+.menu li a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    padding: 15px 20px;
+    transition: background 0.3s;
+}
+
+.menu li a:hover,
+.menu li.active a {
+    background-color: #34495e;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.header {
+    background-color: #fff;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    text-align: right;
+    font-size: 16px;
+    color: #555;
+}
+
+/* Content */
+.content {
+    padding: 20px;
+    flex: 1;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+/* Filters */
+.filters {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.filters select,
+.filters .load-btn {
+    height: 35px; /* Adjust the height for a rectangular shape */
+    width: 200px; /* Adjust width for the desired size */
+    padding: 5px; /* Reduce padding for a compact design */
+    font-size: 14px; /* Smaller font size */
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.load-btn {
+    height: 35px; /* Match the height of the select boxes */
+    width: auto; /* Keep button width auto for flexible size */
+    background-color: #4A90E2;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.load-btn:hover {
+    background-color: #357ABD;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th,
+table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 80px;
+        padding: 10px;
+    }
+
+    .profile-section {
+        display: none;
+    }
+
+    .filters {
+        flex-direction: column;
+    }
+
+    .header {
+        text-align: center;
+    }
+}
+.save-btn {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding around the text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size */
+    transition: background-color 0.3s; /* Smooth transition on hover */
+}
+
+.save-btn:hover {
+    background-color: #45a049; /* Darker green when hovered */
+}
+
+.save-btn:active {
+    background-color: #388e3c; /* Even darker green when clicked */
+}
+
+.save-btn:focus {
+    outline: none; /* Remove the outline on focus */
+}
+/* Modal background */
+.modal {
+    display: none;  /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);  /* Semi-transparent background */
+    z-index: 1000;  /* Make sure modal appears above other content */
+    justify-content: center;  /* Center the modal horizontally */
+    align-items: center;  /* Center the modal vertically */
+    overflow: auto;  /* Add a scroll bar for the modal background if content overflows */
+}
+
+/* Modal content */
+.modal-content {
+    position: relative;
+    background-color: white;
+    padding: 20px;
+    max-width: 80%;  /* Adjust width as needed */
+    max-height: 80%;  /* Adjust height as needed */
+    overflow: auto;  /* Add scroll bar if content exceeds the height */
+    border-radius: 8px;  /* Optional: Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Optional: Add shadow for better visibility */
+}
+
+/* Close button styles */
+.close-btn {
+    position: absolute;
+    right: 25px;
+    top: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #aaa;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Styles for the iframe */
+#modal-iframe {
+    width: 100%;
+    height: 400px; /* Fixed height */
+    border: none;
+    overflow: auto; /* Ensure scrollbar appears if content overflows */
+    display: block;
+    background: #fff; /* Optional for better visibility */
+}
+
+
+/* Ensure the iframe's parent container allows scrolling if needed */
+#courseBox {
+    max-height: 500px; /* Set max height for the container */
+    overflow: hidden; /* Hide scrollbars of the container itself */
+}
+
+#courseBox iframe {
+    overflow: auto; /* Ensure iframe can scroll if its content exceeds size */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile devices */
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+.add-btn {
+    height: 35px; /* Match the height of the select boxes */
+    width: auto; /* Keep button width auto for flexible size */
+    background-color: #4A90E2; /* Blue background */
+    color: #fff; /* White text */
+    border: none; /* Remove border */
+    cursor: pointer; /* Pointer cursor on hover */
+    padding: 0 15px; /* Horizontal padding to make it look better */
+    font-size: 16px; /* Adjust font size */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.add-btn:hover {
+    background-color: #357ABD; /* Darker blue on hover */
+}
+
+
+
+
+
+
+

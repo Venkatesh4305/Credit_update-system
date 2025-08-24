@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+/* General layout */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+}
+
+.dashboard {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 60px;
+    background-color: #2C3E50;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+    align-items: center;
+}
+
+.sidebar-icon {
+    margin: 15px 0;
+    color: #fff;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.main-content {
+    flex-grow: 1;
+    background-color: #ecf0f1; /* Main content background */
+    padding: 20px;
+}
+
+.header h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column; /* Change to column layout */
+}
+
+/* Styling for select elements */
+.select-container {
+    display: flex; /* Keep it as a row */
+    align-items: center; 
+}
+
+/* Styling for labels */
+label {
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+/* Styling for select elements */
+.styled-select {
+   padding: 6px; 
+   margin-right: 15px; 
+   font-size: 14px; 
+   background-color: #A6E481; /* Background color for select dropdowns */
+   color: white; /* Text color */
+   border-radius: 10px; /* Rounded corners */
+   border: none; /* Remove default border */
+}
+
+/* Button Styles */
+.upload-btn {
+   padding: 10px 20px; 
+   background-color: #A6E481; /* Background color for Add button */
+   color: white; 
+   border-radius: 5px; /* Rounded corners */
+   border: none; 
+   cursor: pointer; 
+   font-size: 16px; 
+}
+
+.upload-btn:hover {
+   background-color: #A6E481; /* Maintain the same background color on hover */
+}
+
+/* Course Table Container */
+.course-table {
+   margin-top: 20px; 
+   padding-top: 10px; 
+   display:none; /* Initially hidden */
+}
+
+table {
+   width: 100%;
+   border-collapse: collapse; 
+   box-shadow: 0px 4px 8px rgba(0,0,0,0.1); /* Add shadow for better visibility */
+}
+
+th, td {
+   padding: 10px; 
+   text-align:left; 
+   border-bottom :1px solid #ccc; 
+}
+
+th {
+   background-color:#A6E481; /* Changed header background color to #A6E481 */
+   color:white; /* Header text color */
+}
+
+tbody tr:nth-child(odd) {
+   background-color:#d4eaf7; /* Lighter color for odd rows */
+}
+
+tbody tr:nth-child(even) {
+   background-color:#b6ccd8; /* Darker color for even rows */
+}
+
+/* Ensure no EF878D references exist */

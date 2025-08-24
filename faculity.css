@@ -1,0 +1,111 @@
+.body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f5f5f5;
+    }
+
+    .navbar {
+        background-color: #ffffff;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar h1 {
+        font-size: 1.5rem;
+        color: #333333;
+    }
+
+    .navbar .back-button {
+        background-color: #6A5ACD;
+        color: #ffffff;
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+        border-radius: 4px;
+        font-size: 0.9rem;
+    }
+
+    .container {
+        padding: 2rem;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+
+    .header h2 {
+        font-size: 1.5rem;
+        color: #333333;
+    }
+
+    .table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: #ffffff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .table th,
+    .table td {
+        padding: 1rem;
+        text-align: left;
+        border-bottom: 1px solid #dddddd;
+    }
+
+    .table th {
+        background-color: #f2f2f2;
+    }
+
+    .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modal-content {
+        background-color: #ffffff;
+        padding: 2rem;
+        border-radius: 8px;
+        width: 400px;
+    }
+
+    .modal-content h3 {
+        margin-top: 0;
+    }
+
+    .modal-content form input {
+        width: 100%;
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+        border: 1px solid #dddddd;
+        border-radius: 4px;
+    }
+
+    .modal-content form button {
+        background-color: #6A5ACD;
+        color: #ffffff;
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .modal-content form .cancel-button {
+        background-color: #f44336;
+        margin-left: 0.5rem;
+    }
+ 

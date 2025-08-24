@@ -1,0 +1,97 @@
+/* tooltip settings */
+.copy {
+    --button-bg: #ffffff;
+    --button-hover-bg: #464646;
+    --button-text-color: #474747;
+    --button-hover-text-color: #8bb9fe;
+    --button-border-radius: 10px;
+    --button-diameter: 36px;
+    --button-outline-width: 1px;
+    --button-outline-color: rgb(141, 141, 141);
+    --tooltip-bg: #f4f3f3;
+    --toolptip-border-radius: 4px;
+    --tooltip-font-family: Menlo, Roboto Mono, monospace;
+    --tooltip-font-size: 12px;
+    --tootip-text-color: rgb(50, 50, 50);
+    --tooltip-padding-x: 7px;
+    --tooltip-padding-y: 7px;
+    --tooltip-offset: 8px;
+  }
+  
+  .copy {
+    box-sizing: border-box;
+    width: var(--button-diameter);
+    height: var(--button-diameter);
+    border-radius: var(--button-border-radius);
+    background-color: var(--button-bg);
+    color: var(--button-text-color);
+    border: none;
+    cursor: pointer;
+    position: relative;
+    outline: none;
+  }
+  
+  .tooltip {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font: var(--tooltip-font-size) var(--tooltip-font-family);
+    color: var(--tootip-text-color);
+    background: var(--tooltip-bg);
+    padding: var(--tooltip-padding-y) var(--tooltip-padding-x);
+    border-radius: var(--toolptip-border-radius);
+    pointer-events: none;
+    transition: opacity 0.3s;
+  }
+  
+  .tooltip::before {
+    content: attr(data-text-initial);
+  }
+  
+  .copy:hover,
+  .copy:focus {
+    background-color: var(--button-hover-bg);
+  }
+  
+  .loader, .loader::before, .loader::after {
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 10px;
+    animation: rotate 1.5s linear infinite;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .loader {
+    display: none;
+    border-color: #5a4ff3;
+  }
+  
+  .loader::before {
+    border-color: #35a2d2;
+    width: 110%;
+    height: 110%;
+    animation-delay: .5s;
+  }
+  
+  .loader::after {
+    border-color: #9c40fc;
+    width: 120%;
+    height: 120%;
+    animation-delay: .1s;
+  }
+  
+  @keyframes rotate {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  

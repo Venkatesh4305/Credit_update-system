@@ -1,0 +1,93 @@
+#courseBox {
+    display: none;  /* Initially hidden */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    width: 200px;  /* Adjust as needed */
+    z-index: 1000;
+}
+
+#courseBox form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#courseBox label {
+    font-weight: bold;
+    margin-bottom: 2px;
+    font-size: 10px;
+}
+
+#courseBox input, #courseBox select {
+    padding: 5px;
+    font-size: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#courseBox button {
+    padding: 5px 8px;
+    font-size: 10px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+#courseBox button[type="submit"] {
+    background-color: #28a745;
+    color: #ffffff;
+    transition: background-color 0.3s;
+}
+
+#courseBox button[type="submit"]:hover {
+    background-color: #218838;
+}
+
+#courseBox button[type="button"] {
+    background-color: #dc3545;
+    color: #ffffff;
+    transition: background-color 0.3s;
+}
+
+#courseBox button[type="button"]:hover {
+    background-color: #c82333;
+}
+body {
+    margin: 0;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items: center; /* Vertical centering */
+    background-color: #f9f9f9; /* Optional: Set a light background color */
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+button:active {
+    background-color: #004080;
+    transform: scale(1);
+}
+

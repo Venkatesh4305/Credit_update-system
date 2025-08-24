@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #eaf3ff, #ffffff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.login-box {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 400px; /* Increased width for bigger input fields */
+    text-align: center;
+}
+
+.icon-container img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    margin: 10px 0 20px;
+    font-size: 26px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.login-form .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.login-form label {
+    font-size: 15px;
+    color: #333333;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.password-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.eye-icon {
+    cursor: pointer;
+    font-size: 18px;
+    user-select: none;
+}
+
+.login-form input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.2);
+}
+
+.login-btn {
+    background: #000000;
+    color: #ffffff;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.login-btn:hover {
+    background: #333333;
+}
+
+.forgot-password {
+    margin: 15px 0;
+    font-size: 14px;
+    color: #007bff;
+}
+
+.forgot-password a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+.admin-login-btn {
+    background: #f4f4f4;
+    color: #000000;  
+    padding: 12px 15px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.admin-login-btn:hover {
+    background: #e0e0e0;
+}

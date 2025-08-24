@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Structure</title>
+    <link rel="stylesheet" href="cs.css"> <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard">
+        <div class="sidebar">
+            <div class="sidebar-icon">
+                <a href="dash.html"<i class="fa-solid fa-house"></i></a>
+            </div>
+            <div class="sidebar-icon">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="sidebar-icon">
+                <i class="fa-solid fa-chart-pie"></i>
+            </div>
+            <div class="sidebar-icon">
+                <i class="fa-solid fa-gear"></i>
+            </div>
+            <div class="sidebar-icon" style="margin-top:auto;">
+                <i class="fa-regular fa-user"></i>
+            </div>
+        </div>
+
+        <div class="main-content">
+           <div class="header">
+                <h1>Course Structure</h1>
+           </div>
+
+           <!-- Container for select and button -->
+           <div class="form-container" style="background-color: #8083F7; padding: 10px; border-radius: 8px;">
+               <div class="select-container">
+                   <label for="year">Select Year:</label>
+                   <select id="year" class="styled-select">
+                       <option value="">--Select Year--</option>
+                       <option value="1">1st Year</option>
+                       <option value="2">2nd Year</option>
+                       <option value="3">3rd Year</option>
+                       <option value="4">4th Year</option>
+                   </select>
+
+                   <label for="sem">Select Semester:</label>
+                   <select id="sem" class="styled-select">
+                       <option value="">--Select Semester--</option>
+                       <!-- Only 4 semesters -->
+                       <option value="1">Semester 1</option>
+                       <option value="2">Semester 2</option>
+                   </select>
+
+                   <!-- Go Button -->
+                   <button class="upload-btn" onclick="showTable()">Go</button> <!-- Call function on click -->
+               </div>
+           </div>
+
+           <!-- Table Container (below the form) -->
+           <div id="course-table" class="course-table"></div> <!-- Empty div to hold the table -->
+       </div> 
+    </div>
+
+    <!-- JavaScript to handle table display -->
+    <script src="cs.js"></script> <!-- Link to the JavaScript file -->
+</body>
+</html>
